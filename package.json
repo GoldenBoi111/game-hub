@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"vite\" \"nodemon ./src/services/index.js\"",
-    "build": "tsc -b && vite build",
+    "build": "concurrently \"tsc -b && vite build\" \"nodemon ./src/services/index.js\"",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "concurrently \"vite preview\" \"nodemon ./src/services/index.js\""
   },
   "dependencies": {
     "@chakra-ui/react": "^3.20.0",

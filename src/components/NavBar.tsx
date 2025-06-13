@@ -1,11 +1,4 @@
-import {
-  HStack,
-  Image,
-  Input,
-  InputGroup,
-  Spacer,
-  Text,
-} from "@chakra-ui/react";
+import { HStack, Image, Input, InputGroup, Spacer } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
 import { CiSearch } from "react-icons/ci";
 import { ColorModeButton } from "./ui/color-mode";

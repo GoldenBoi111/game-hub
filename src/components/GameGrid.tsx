@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import apiClient from "@/services/api-client";
 import {
-  Avatar,
   Card,
   Grid,
   Image,
@@ -11,8 +10,6 @@ import {
   useListCollection,
   useFilter,
   Spinner,
-  Spacer,
-  Button,
 } from "@chakra-ui/react";
 
 interface GameImage {
@@ -33,10 +30,6 @@ interface Game {
   tags: JSON[];
   image: GameImage;
   deck: string;
-}
-
-interface FetchGames {
-  results: Game[];
 }
 
 const GameGrid = () => {

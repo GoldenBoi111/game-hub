@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"vite\" \"nodemon ./src/services/index.js\"",
-    "build": "concurrently \"tsc -b && vite build\" \"nodemon ./src/services/index.js\"",
+    "dev": "concurrently \"tsc -b && vite build\" \"nodemon ./src/services/index.js\"",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "concurrently \"vite preview\" \"nodemon ./src/services/index.js\""
+    "preview": "vite preview"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.20.0",

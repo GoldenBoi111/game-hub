@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://game-hub-lz2g.vercel.app/", // frontend origin
+    origin: "https://game-hub-vcky.vercel.app/", // frontend origin
     methods: ["GET", "POST"], // allowed HTTP methods
     credentials: true, // if you're using cookies or auth headers
   })

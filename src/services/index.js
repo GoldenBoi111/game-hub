@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend origin
+    origin: "https://game-hub-lz2g.vercel.app/", // frontend origin
     methods: ["GET", "POST"], // allowed HTTP methods
     credentials: true, // if you're using cookies or auth headers
   })
@@ -156,7 +156,7 @@ app.get("/gamesiP", async (req, res) => {
   }
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

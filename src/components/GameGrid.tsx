@@ -32,7 +32,11 @@ interface Game {
   deck: string;
 }
 
-const GameGrid = () => {
+interface gamegridYear {
+  year: number;
+}
+
+const GameGrid = ({ year }: gamegridYear) => {
   const [platform, setPlatform] = useState("");
   const [games, setGames] = useState<Game[]>([]);
   const [error, setError] = useState("");
@@ -84,6 +88,7 @@ const GameGrid = () => {
       .get("/games" + temp, {
         params: {
           sort: sort,
+          filter: `expected_release_year:${year}`,
         },
       })
       .then((res) => {
@@ -96,7 +101,7 @@ const GameGrid = () => {
         console.log(err);
         setLoading(false);
       });
-  }, [platform, sort]);
+  }, [platform, sort, year]);
 
   console.log(games);
 
@@ -163,12 +168,16 @@ const GameGrid = () => {
           </Portal>
         </Combobox.Root>
       </HStack>
-      {loading && <Spinner size={"xl"} padding={"80px"} />}
+      {loading && (
+        <Spinner
+          size={"xl"}
+          padding={"80px"}
+          marginLeft={"450px"}
+          marginTop={"200px"}
+        />
+      )}
       {!loading && (
-        <Grid
-          templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
-          gap={6}
-          p={6}>
+        <Grid templateColumns="repeat(auto-fill, 300px)" gap={10} p={6}>
           {games?.map((game) => (
             <>
               <Card.Root key={game.guid} maxH="xl" overflow="hidden">

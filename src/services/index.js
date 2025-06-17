@@ -35,9 +35,7 @@ app.get("/gamesPs5", async (req, res) => {
   try {
     const response = await fetch(
       "https://www.giantbomb.com/api/games/?api_key=5552ec3f0dabd509f3cccf32b4d9b0c763502f6e&format=json&platforms=176&offset=1800&" +
-        req._parsedUrl.query +
-        "filter:expected_release_year:" +
-        year
+        req._parsedUrl.query
     );
     const data = await response.json();
     console.log(response);
@@ -52,9 +50,7 @@ app.get("/gamesNS2", async (req, res) => {
   try {
     const response = await fetch(
       "https://www.giantbomb.com/api/games/?api_key=5552ec3f0dabd509f3cccf32b4d9b0c763502f6e&format=json&platforms=210&" +
-        req._parsedUrl.query +
-        "filter:expected_release_year:" +
-        year
+        req._parsedUrl.query
     );
     const data = await response.json();
     console.log(response);
@@ -69,9 +65,7 @@ app.get("/gamesXbx", async (req, res) => {
   try {
     const response = await fetch(
       "https://www.giantbomb.com/api/games/?api_key=5552ec3f0dabd509f3cccf32b4d9b0c763502f6e&format=json&platforms=179&" +
-        req._parsedUrl.query +
-        "filter:expected_release_year:" +
-        year
+        req._parsedUrl.query
     );
     const data = await response.json();
     console.log(response);
@@ -87,9 +81,7 @@ app.get("/gamesNS1", async (req, res) => {
   try {
     const response = await fetch(
       "https://www.giantbomb.com/api/games/?api_key=5552ec3f0dabd509f3cccf32b4d9b0c763502f6e&format=json&platforms=157&" +
-        req._parsedUrl.query +
-        "filter:expected_release_year:" +
-        year
+        req._parsedUrl.query
     );
     const data = await response.json();
     console.log(response);
@@ -105,9 +97,7 @@ app.get("/gamesXbx1", async (req, res) => {
   try {
     const response = await fetch(
       "https://www.giantbomb.com/api/games/?api_key=5552ec3f0dabd509f3cccf32b4d9b0c763502f6e&format=json&platforms=145&" +
-        req._parsedUrl.query +
-        "filter:expected_release_year:" +
-        year
+        req._parsedUrl.query
     );
     const data = await response.json();
     console.log(response);
@@ -123,9 +113,7 @@ app.get("/gamesPs4", async (req, res) => {
   try {
     const response = await fetch(
       "https://www.giantbomb.com/api/games/?api_key=5552ec3f0dabd509f3cccf32b4d9b0c763502f6e&format=json&platforms=146&" +
-        req._parsedUrl.query +
-        "filter:expected_release_year:" +
-        year
+        req._parsedUrl.query
     );
     const data = await response.json();
     console.log(response);
@@ -141,9 +129,7 @@ app.get("/gamesAnd", async (req, res) => {
   try {
     const response = await fetch(
       "https://www.giantbomb.com/api/games/?api_key=5552ec3f0dabd509f3cccf32b4d9b0c763502f6e&format=json&platforms=123&" +
-        req._parsedUrl.query +
-        "filter:expected_release_year:" +
-        year
+        req._parsedUrl.query
     );
     const data = await response.json();
     console.log(response);
@@ -159,9 +145,7 @@ app.get("/gamesiP", async (req, res) => {
   try {
     const response = await fetch(
       "https://www.giantbomb.com/api/games/?api_key=5552ec3f0dabd509f3cccf32b4d9b0c763502f6e&format=json&platforms=96&" +
-        req._parsedUrl.query +
-        "filter:expected_release_year:" +
-        year
+        req._parsedUrl.query
     );
     const data = await response.json();
     console.log(response);
